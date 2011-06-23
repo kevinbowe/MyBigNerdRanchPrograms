@@ -10,6 +10,7 @@
 		3F5F8AF313B2898A0037C964 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8AF213B2898A0037C964 /* MapPoint.m */; };
 		3F5F8AF613B28DA20037C964 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5F8AF513B28DA20037C964 /* MapKit.framework */; };
 		3F5F8AF813B28DAF0037C964 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5F8AF713B28DAF0037C964 /* CoreLocation.framework */; };
+		3F829DB513B2D7B100E10236 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3F829DB413B2D7B100E10236 /* README */; };
 		3FA490C613B28752008F7011 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA490C513B28752008F7011 /* UIKit.framework */; };
 		3FA490C813B28752008F7011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA490C713B28752008F7011 /* Foundation.framework */; };
 		3FA490CA13B28752008F7011 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA490C913B28752008F7011 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		3F5F8AF213B2898A0037C964 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		3F5F8AF513B28DA20037C964 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F5F8AF713B28DAF0037C964 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F829DB413B2D7B100E10236 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		3FA490C113B28752008F7011 /* WhereamiOneDotOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereamiOneDotOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA490C513B28752008F7011 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FA490C713B28752008F7011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 		3FA490CB13B28752008F7011 /* WhereamiOneDotOne */ = {
 			isa = PBXGroup;
 			children = (
+				3F829DB413B2D7B100E10236 /* README */,
 				3FA490D413B28752008F7011 /* WhereamiOneDotOneAppDelegate.h */,
 				3FA490D513B28752008F7011 /* WhereamiOneDotOneAppDelegate.m */,
 				3FA490D713B28752008F7011 /* iPhone */,
@@ -259,6 +262,7 @@
 				3FA490D013B28752008F7011 /* InfoPlist.strings in Resources */,
 				3FA490DD13B28752008F7011 /* MainWindow_iPhone.xib in Resources */,
 				3FA490E413B28752008F7011 /* MainWindow_iPad.xib in Resources */,
+				3F829DB513B2D7B100E10236 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
