@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'WhereamiOneDotOneTests' target in the 'WhereamiOneDotOneTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
