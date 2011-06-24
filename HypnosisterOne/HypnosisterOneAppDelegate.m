@@ -60,8 +60,24 @@
     view = [[HypnosisView alloc] initWithFrame:reallyBigRect];
     [view setBackgroundColor:[UIColor clearColor]];
     [scrollView addSubview:view];
-        
     
+    // Hide StatusBar.  This will cause the StatusBar to initiall be displayed and then 'fade'...
+    [[UIApplication sharedApplication] setStatusBarHidden:YES 
+                                                    withAnimation:UIStatusBarAnimationFade];
+    
+    /* An alternative to the command above woudl be to modify the HypnosisterOne-Info.plist file.
+     * - Open the file which displays a nice 'form' to add or modify options.
+     * - rt:btn in the open space
+     * - SELECT: Add Row
+     *     A dropdown list will open.  Scroll to the "Status bar is initiall hidden" choice.
+     * - SELECT the choice
+     * - Set the Boolean value to 'YES'
+     *
+     *============================================================
+     * You can also open the file as source-code and add this tag:
+     *    <key>UIStatusBarHidden</key>
+     */
+
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;
