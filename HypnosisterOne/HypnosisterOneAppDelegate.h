@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class HypnosisView;
 
-@interface HypnosisterOneAppDelegate : NSObject <UIApplicationDelegate> {
+@interface HypnosisterOneAppDelegate : NSObject <UIApplicationDelegate, UIScrollViewDelegate> {
 
     UIWindow *window;
     HypnosisView *view;

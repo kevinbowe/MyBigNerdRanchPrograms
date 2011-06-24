@@ -15,6 +15,12 @@
 //...@synthesize window=_window;
 @synthesize window;
 
+
+- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return view;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -44,6 +50,11 @@
     offset.x = wholeWindow.size.width * 0.5;
     offset.y = wholeWindow.size.height * 0.5;
     [scrollView setContentOffset:offset];
+    
+    // Enable zooming...
+    [scrollView setMinimumZoomScale:0.5];
+    [scrollView setMaximumZoomScale:5];
+    [scrollView setDelegate:self];
     
     // Create the view...
     view = [[HypnosisView alloc] initWithFrame:reallyBigRect];
