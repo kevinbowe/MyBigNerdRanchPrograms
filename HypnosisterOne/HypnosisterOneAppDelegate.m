@@ -15,16 +15,52 @@
 //...@synthesize window=_window;
 @synthesize window;
 
+
+- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return view;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
     CGRect wholeWindow = [window bounds];
-    view = [[HypnosisView alloc] initWithFrame:wholeWindow];
+    
+    
+    // view = [[HypnosisView alloc] initWithFrame:wholeWindow];
+    // [view setBackgroundColor:[UIColor clearColor]];
+    
+    // // Add the new view as a subview of the governing window...
+    // [window addSubview:view];
+    
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:wholeWindow];
+    [window addSubview:scrollView];
+    [scrollView release];
+    
+    // Make your view twice as large as the window...
+    CGRect reallyBigRect;
+    reallyBigRect.origin = CGPointZero;
+    reallyBigRect.size.width = wholeWindow.size.width * 2.0;
+    reallyBigRect.size.height = wholeWindow.size.height * 2.0;
+    [scrollView setContentSize:reallyBigRect.size];
+    
+    // Center it in the scroll view...
+    CGPoint offset;
+    offset.x = wholeWindow.size.width * 0.5;
+    offset.y = wholeWindow.size.height * 0.5;
+    [scrollView setContentOffset:offset];
+    
+    // Enable zooming...
+    [scrollView setMinimumZoomScale:0.5];
+    [scrollView setMaximumZoomScale:5];
+    [scrollView setDelegate:self];
+    
+    // Create the view...
+    view = [[HypnosisView alloc] initWithFrame:reallyBigRect];
     [view setBackgroundColor:[UIColor clearColor]];
-    
-    // Add the new view as a subview of the governing window...
-    [window addSubview:view];
-    
+    [scrollView addSubview:view];
+        
     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
