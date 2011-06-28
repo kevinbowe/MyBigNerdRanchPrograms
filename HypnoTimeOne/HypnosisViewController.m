@@ -19,6 +19,36 @@
     [hv release];
 }
 
+// This code block demonstrates scrolling between two pages.  Pages 'snap' into place so
+// we don't see part of either view - only the complete view.
+// This code does NOT use HypnosisView or CurrentTime.
+//-(void) loadView
+//{
+//    CGRect frame = [[UIScreen mainScreen] applicationFrame];
+//    UIScrollView *sv = [[[UIScrollView alloc]
+//                         initWithFrame:frame] autorelease];
+//    frame.origin.y = 0;
+//    UIView *aView = [[[UIView alloc] 
+//                      initWithFrame:frame] autorelease];
+//    
+//    frame.origin.x += frame.size.width;
+//    UIView *bView = [[[UIView alloc] 
+//                     initWithFrame:frame] autorelease];
+//    
+//    [aView setBackgroundColor:[UIColor redColor]];
+//    [bView setBackgroundColor:[UIColor greenColor]];
+//    
+//    [sv addSubview:aView];
+//    [sv addSubview:bView];
+//    
+//    // ContentSize should be wide enough for 2x pages...
+//    [sv setContentSize:CGSizeMake(2 * frame.size.width, frame.size.height)];
+//    
+//    [sv setPagingEnabled:YES];
+//    
+//    [self setView:sv];
+//    
+//}
 
 - (id) init
 {
