@@ -7,9 +7,18 @@
 //
 
 #import "HypnosisViewController.h"
-
+#import "HypnosisView.h"
 
 @implementation HypnosisViewController
+
+- (void) loadView
+{
+    HypnosisView *hv = [[HypnosisView alloc] initWithFrame:CGRectZero];
+    [hv setBackgroundColor:[UIColor whiteColor]];
+    [self setView:hv];
+    [hv release];
+}
+
 
 - (id) init
 {
@@ -41,8 +50,9 @@
 {
     [super viewDidLoad];
     
+    // Removed for [git:feature/CreateViewsForControllers+] branch...
     // Set the background color of the view so we can see it...
-    [[self view] setBackgroundColor:[UIColor orangeColor]];   
+    //...[[self view] setBackgroundColor:[UIColor orangeColor]];   
 }
 
 
